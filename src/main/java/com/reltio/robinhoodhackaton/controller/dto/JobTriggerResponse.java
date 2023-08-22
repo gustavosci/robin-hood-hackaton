@@ -1,3 +1,5 @@
 package com.reltio.robinhoodhackaton.controller.dto;
 
-public record JobTriggerResponse(Boolean success) { }
+import java.util.List;
+
+public record JobTriggerResponse(boolean success, List<String> threadNames) { }

@@ -18,7 +18,6 @@ public class RobinHoodApiController {
 
     @PostMapping
     public JobTriggerResponse triggerJob(@RequestBody JobTriggerRequest request) {
-        boolean success = jobTriggerService.trigger(request);
-        return new JobTriggerResponse(success);
+        return jobTriggerService.trigger(request);
     }
 }
